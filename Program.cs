@@ -1,4 +1,16 @@
 ﻿
+    Hund coco = new Hund();
+    coco.Name = "Coco";
+    coco.Alter = 10;
+    coco.Rasse = "Collie";
+    coco.Geschlecht = "Männlich";
+
+    coco.Bellen();
+    coco.Fressen();
+
+    Console.ReadKey();
+
+
 class Hund
 {
     public string Name { get; set; }
@@ -6,20 +18,14 @@ class Hund
     public string Rasse { get; set; }
     public string Geschlecht { get; set; }
 
-    static void Bellen(string Name)
+    public void Bellen()
     {
-        Console.WriteLine( Name + "bellt!");
+        Console.WriteLine("{0} bellt!", Name);
     }
-    static void Fressen(string Name)
+    public void Fressen()
     {
-        Console.WriteLine(Name + "frisst!");
+        Console.WriteLine("{0} frisst!", Name);
     }
 
-    public Hund(string name, byte alter, string rasse, string geschlecht)
-    {
-        Name = name;
-        Alter = alter;
-        Rasse = rasse;
-        Geschlecht = geschlecht;
-    }
 }
+
